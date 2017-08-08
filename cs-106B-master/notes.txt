@@ -1,0 +1,146 @@
+Functions ---------------------------------------------------------
+
+- Pointer in c++ are simpler than c, check out the syntx
+  void asd(int& a) {}
+  asd(variable);
+
+- use angular arrows in place of + for concatenation in cout
+
+Strings -----------------------------------------------------------
+
+- strings unlike in java are immutable
+
+- >, != can be used with strings due to its
+  operator overloading feature.
+
+- string::npos is the index returned when a particular char is
+  not found while searching. In java js, -1 is returned.
+
+- "Hellow"  is a C string
+
+- string s = "hello " + "asd"; // wrong because hello and asd are c strings
+
+- "hellow".length(); // error
+
+- str s = "hellow"; // casted
+  s.length(); // no error
+
+- C strings to C++ string =  string("helow");
+
+- C++ strings to C string = string.c_str();
+
+- int n = (int) "42"; // bug in c++ - store memory address of "42"
+  use stringToInteger - in stanford libs and integerToString() for vice versa
+
+- Concatenation errors :
+  string s = "hellow" + '?'; // C string + char // buggy
+  string s = "hellow" + 21; // Cstring + int // buggy
+  string s = "hellow"; s += 41; // Output - 'hellow)' coz 41 is ascii for ')'
+
+- cin >> name; // lets say we entered 'Arshad Khan'
+  // but name will hold only 'Arshad' because cin reads word by word so
+  // better use getline
+
+IO streams -----------------------------------------------------------------
+
+- cin is variable of type ifstream and cout is variable of type cout
+
+- use fileExists(path) to check if file exists //filelib.h
+
+From ER notes :--------------------------------------------------------------
+
+
+    The type of Boolean variables is bool instead of boolean.
+
+    The type char represents an 8-bit ASCII character instead of a 16-bit
+     Unicode character.
+
+    Programs in C++ begin by calling a function named main that returns an
+     integer status, which is 0 on successful completion.
+
+    All functions used in a C++ program must be preceded by a prototype that
+    defines their parameter structure.
+
+    There are many accidental differences in the methods exported by the string
+    class.  For example, the second argument to the C++ substr method is the
+    length and not the ending position.
+
+    The discipline used for console I/O is significantly different, but not
+    essentially so.
+
+    C++ allows you to get very close to the inner workings of the machine.  Java
+    protects you from these details.
+
+    C++ supports call by reference.
+
+    C++ allows programmers to modify the language in more ways than Java does.
+
+    In particular, a C++ class can redefine the meaning of operators such as +
+    or <<.
+
+    C++ has no garbage collector of the sort that Java does.  As a result, you
+    are responsible for freeing any memory that is allocated on the heap.
+
+    Objects in Java are always allocated in the heap. In C++, objects are
+    typically stored on the stack to simplify the task of memory management.
+
+    C++ supports multiple inheritance, which means that classes can inherit
+    behavior from more than one superclass.
+
+    Functions can specify optional parameters by including an initializer after
+    the variable name.  For example, the function prototype
+
+    int asd(int mar = 72){...} // mar is optional having value 72 for asd function
+    However, complications arise in the case of multiple arguments. The compiler can't tell which argument you've omitted
+    Consider the following code.
+    int myfunction( int optional = 3, int mandatory );
+    What will myfunction(4); return?
+    Because this is ambiguous, your arguments must be placed in order, sorted by how often you will pass values to them.
+    For example, since you ALWAYS pass an argument to mandatory, that must come first. If there is a function with two default
+    values int myfunction( int mandatory, int optional1 = 3, int optional2 = 5 ); then the program will omit the values at the
+    end if you don't specify all of the arguments, so it makes sense to put the arguments you use more often first.
+
+
+    String and streams--
+
+    The C++ libraries define the type wchar_t to represent “wide characters”
+    that allow for a larger range. not using it cs106b
+
+    Note :
+    ifstream and ofstream 's  open method/mem function takes C string, not C++
+    string-- Mind it.
+
+    And use '' for chars and " " for strings.
+
+Sets martystepp lecture --------------------------------------------------------
+
+  maths can be done on sets eg- s1 += s2 and so on... a watch out for s1*s2 and
+  s1*=s2.
+
+
+Another strategy for for loop:
+  Syntax for(strings : v) {...}
+
+
+Note - while checking conditions, first return false in all the failing conditions then what left will be true.
+
+Note- File Read
+    - input >> word - discourage way to read from ifstream instance i.e input
+     here.
+    Use getLine and cast it later according to need.
+
+
+Implementing ArrayList --------------------------------------------------------
+
+  Two types of Array in C++
+
+  1- type* name = new type[length]
+
+  dynamically allocated array + var is pointer + memory should be manually
+  released or program will have a memory leak;
+  stored in stack
+
+  2- type name[length];
+
+  fixed array - cant be resized
+  stored in heap

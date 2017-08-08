@@ -1,0 +1,20 @@
+
+do it in one program file -
+    tokenscanner.
+    ofstream questionss
+
+watch jzelenski - sorting, bsearcch, backtracking vids.
+and buidling java proggrams vids ->
+media.pearsoncmg.com/aw/aw_reges_bjp_2/videoPlayer.php?id=c13-2
+http://media.pearsoncmg.com/aw/aw_reges_bjp_2/videoPlayer.php?id=c12-1
+http://media.pearsoncmg.com/aw/aw_reges_bjp_2/videoPlayer.php?id=c12-2
+http://media.pearsoncmg.com/aw/aw_reges_bjp_2/videoPlayer.php?id=c12-3
+(sorting)
+
+
+Read chapter - 1-10 from eroberts book.
+
+Do maze problem with sol path.
+Do nim game
+Clear minimax algo
+Insertion sort and merge sort
